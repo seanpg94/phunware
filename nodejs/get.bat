@@ -1,0 +1,1 @@
+curl -i -X GET -H 'Content-Type: application/json'  http://localhost:9999/weather/getWeather/78613

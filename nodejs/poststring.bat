@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -d "{\"zipList\": [ \"87101\",\"70112\", \"36101\", \"38103\", \"28207\", \"44102\", \"80012\", \"30303\", \"76051\", \"78701\", \"76054\" ] }" http://localhost:9999/weather/getWeatherListByZip
