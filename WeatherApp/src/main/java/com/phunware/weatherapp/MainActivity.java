@@ -4,7 +4,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -232,6 +234,16 @@ public class MainActivity extends ActionBarActivity implements AddZipFragment.Ad
                         _zipManager.addZipcode(zip);
                         _cities.add(city);
                         updateAdapter();
+
+                        // select the item at the end of the list
+                        // We add new zip codes at the end of the data structure,
+                        // so this is a safe operation.
+                        ListView listView = _cityListFragment.getListView();
+                        if (_adapter.getCount() != 0) {
+                            int pos = _adapter.getCount() -1;
+                            View newView = _adapter.getView(pos, null, null);
+                            listView.performItemClick(newView, pos, pos);
+                        }
                     }
                     else
                     {

@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -d "{\"zipList\": [ \"87101\",\"70112\"] }" http://nameless-mountain-3549.herokuapp.com//weather/getWeatherListByZip
